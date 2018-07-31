@@ -8,6 +8,9 @@ Click the noTweet icon in your extensions tool bar. Or, use the keyboard shortcu
 ## To show tweets / enable tweeting:
 Click the icon again, or re-enter the keyboar shortcuts!
 
+## Deployment
+Clone this repository. Navigate to chrome://extensions in your browser and enabled Developer Mode. Load an unpacked extension and point it to this repository.
+
 
 ### Attribution:
 The noTweet icon is a composite of two SVG icons
