@@ -1,11 +1,11 @@
-# noTweet, a celebration of No Tweet Day #piples
+# noTweet, a celebration of Tweet Nothing Day
 
-This extension removes the tweet stream from all twitter.com urls when active.
+This extension removes the tweet stream from twitter.com urls when active. It also removes the tweet button.
 
-## To hide tweets:
+## To hide tweets / disable tweeting:
 Click the noTweet icon in your extensions tool bar. Or, use the keyboard shortcut CTRL + SHIFT + T (Mac and PC)
 
-## To show tweets:
+## To show tweets / enable tweeting:
 Click the icon again, or re-enter the keyboar shortcuts!
 
 

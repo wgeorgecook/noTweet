@@ -2,16 +2,17 @@
 let toolbar = "off";
 
 
-chrome.browserAction.onClicked.addListener(function(tab) {
+// Function to toggle the tweet stream when invoked
+function toggle(switcher) {
 
-  if (toolbar === 'off') {
+  if (switcher === 'off') {
     // When the button is clicked, turn it on
     // Update the state to reflect on-ness
     console.log("Extension enabled!");
     chrome.browserAction.setBadgeText({text: 'ON'});
     toolbar = 'on';
 
-    // Hide the tweet stream
+    // Hide the tweet stream and tweet button
     chrome.tabs.executeScript({file: 'js/hideTweet.js'});
 
   } else {
@@ -21,8 +22,13 @@ chrome.browserAction.onClicked.addListener(function(tab) {
     chrome.browserAction.setBadgeText({text: ''});
     toolbar = 'off';
 
-    // And show the tweet stream again
+    // And show the tweet stream and tweet button again
     chrome.tabs.executeScript({file: 'js/showTweet.js'});
   };
 
+}
+
+chrome.browserAction.onClicked.addListener(function(tab) {
+  // Invoke the toggle function when the toolbar is clicked
+  toggle(toolbar);
 });
