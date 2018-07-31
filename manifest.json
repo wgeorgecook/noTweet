@@ -1,0 +1,42 @@
+{
+
+  "name": "No Tweet Day!",
+  "description": "Removes tweet stream when active",
+  "version": "1.0",
+  "manifest_version": 2,
+
+  "background": {
+      "scripts": ["noTweet.js"],
+      "persistent": false
+    },
+
+  "browser_action": {
+    "default_title": "Press Ctrl + Shift + T (Mac and PC) to hide / show tweets!",
+    "default_icon": "img/128-noTweet.png"
+  },
+
+  "icons": {
+    "16": "img/16-noTweet.png",
+    "48": "img/48-noTweet.png",
+    "128": "img/128-noTweet.png" },
+
+  "content_scripts": [
+    {
+      "matches": ["http://*.twitter.com/*"],
+      "js": ["notweet.js"]
+    }
+  ],
+
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+T",
+        "mac": "MacCtrl+Shift+T"
+      },
+      "description": "Hides the tweet stream"
+    }
+  },
+
+  "permissions": ["activeTab"]
+
+}
